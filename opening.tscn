@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/dialogue/paper-dialog.png" type="Texture" id=1]
+[ext_resource path="res://assets/more fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://dialogue.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.793701
+margin_top = 0.793701
+margin_right = 0.793701
+margin_bottom = 0.793701
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dialogue" type="Control" parent="."]
+anchor_left = 0.183
+anchor_top = 0.659
+anchor_right = 0.183
+anchor_bottom = 0.659
+margin_left = -182.948
+margin_top = -375.638
+margin_right = -128.948
+margin_bottom = -322.638
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="dialogue"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 161.898
+margin_top = 374.214
+margin_right = 805.898
+margin_bottom = 479.214
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="dialogue"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 203.877
+margin_top = 392.439
+margin_right = 755.877
+margin_bottom = 456.439
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "Hey joe. Can you go find your mother? She went into the cave a while ago but she hasnt come back yet. Try not to get lost"
+text = "Hey joe. Can you go find your mother? She went into the cave a while ago but she hasnt come back yet. Try not to get lost"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="dialogue"]

@@ -1,0 +1,298 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/more fonts/KiriFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/UI/grey_button04.png" type="Texture" id=2]
+[ext_resource path="res://PlayButton.gd" type="Script" id=3]
+[ext_resource path="res://assets/soundsandmusic/yt1s.com-Kevin-MacLeod-Pixelland-NO-COPYRIGHT-8bit-Music.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/SPOILER_Title1.png" type="Texture" id=5]
+[ext_resource path="res://assets/enemies/slimeBlue_blue.png" type="Texture" id=6]
+[ext_resource path="res://assets/JOE/JoeStanding - LEFT.png" type="Texture" id=7]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.156863, 0.0156863, 0.0901961, 0.580392 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 1 )
+
+[node name="TittleMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_top = 80.0
+margin_right = 2.0
+margin_bottom = 3.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -11.0
+margin_top = -77.1049
+margin_right = 1013.0
+margin_bottom = 522.895
+color = Color( 0, 0.25098, 0.172549, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="ColorRect"]
+margin_left = 652.175
+margin_top = 397.388
+margin_right = 900.175
+margin_bottom = 548.388
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slimeBlue_blue" type="Sprite" parent="ColorRect"]
+position = Vector2( 826.436, 459.342 )
+texture = ExtResource( 6 )
+
+[node name="JoeStanding - LEFT" type="Sprite" parent="ColorRect"]
+position = Vector2( 706.804, 460.465 )
+scale = Vector2( 1.19899, 1.10535 )
+texture = ExtResource( 7 )
+
+[node name="title" type="Sprite" parent="ColorRect"]
+position = Vector2( 509, 126.5 )
+scale = Vector2( 0.941667, 0.857143 )
+texture = ExtResource( 5 )
+
+[node name="PlayButton" type="Button" parent="."]
+margin_left = 306.582
+margin_top = 180.622
+margin_right = 652.582
+margin_bottom = 332.622
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.878431, 0.85098, 0.145098, 1 )
+custom_colors/font_color_hover = Color( 0.0352941, 0.0901961, 0.278431, 1 )
+custom_colors/font_color_pressed = Color( 0.913725, 0.0941176, 0.054902, 1 )
+text = "Play!"
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicTitleScreen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -6.0
+autoplay = true
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 0.006
+anchor_bottom = 0.01
+margin_left = 26.2579
+margin_top = 327.975
+margin_right = 294.77
+margin_bottom = 496.465
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="Panel"]
+anchor_left = -0.031
+anchor_top = -0.163
+anchor_right = -0.031
+anchor_bottom = -0.163
+margin_left = 158.88
+margin_top = 58.9205
+margin_right = 186.88
+margin_bottom = 84.9205
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "W"
+}
+
+[node name="TextureRect4" type="TextureRect" parent="Panel"]
+anchor_left = -0.031
+anchor_top = -0.163
+anchor_right = -0.031
+anchor_bottom = -0.163
+margin_left = 158.943
+margin_top = 137.058
+margin_right = 186.943
+margin_bottom = 163.058
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_editor_description_": "W"
+}
+
+[node name="TextureRect5" type="TextureRect" parent="Panel"]
+anchor_left = -0.031
+anchor_top = -0.163
+anchor_right = -0.031
+anchor_bottom = -0.163
+margin_left = 30.9195
+margin_top = 135.311
+margin_right = 58.9195
+margin_bottom = 161.311
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_editor_description_": "W"
+}
+
+[node name="TextureRect6" type="TextureRect" parent="Panel"]
+anchor_left = -0.031
+anchor_top = -0.163
+anchor_right = -0.031
+anchor_bottom = -0.163
+margin_left = 26.9909
+margin_top = 61.1654
+margin_right = 54.9909
+margin_bottom = 87.1654
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_editor_description_": "W"
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 25.3912
+margin_top = 112.559
+margin_right = 45.3912
+margin_bottom = 145.559
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.00392157, 0, 0.00392157, 1 )
+text = "W"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Panel"]
+margin_left = 157.257
+margin_top = 34.0915
+margin_right = 201.257
+margin_bottom = 71.0915
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.027451, 0, 0.00784314, 1 )
+text = "d"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Panel"]
+margin_left = 160.0
+margin_top = 113.357
+margin_right = 205.0
+margin_bottom = 142.357
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.0196078, 0.00392157, 0.00784314, 1 )
+text = "e"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_left = 21.1036
+margin_top = 37.496
+margin_right = 48.1036
+margin_bottom = 58.496
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.0352941, 0.00392157, 0.0117647, 1 )
+text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Panel"]
+margin_left = 57.4591
+margin_top = 37.8956
+margin_right = 112.459
+margin_bottom = 68.8956
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0313726, 0.717647, 0.101961, 1 )
+text = "left"
+
+[node name="Label6" type="Label" parent="Panel"]
+margin_left = 187.0
+margin_top = 39.3484
+margin_right = 258.0
+margin_bottom = 60.3484
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0313726, 0.717647, 0.101961, 1 )
+text = "right"
+
+[node name="Label7" type="Label" parent="Panel"]
+margin_left = 52.0749
+margin_top = 113.814
+margin_right = 140.075
+margin_bottom = 149.814
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0313726, 0.717647, 0.101961, 1 )
+text = "jump!"
+
+[node name="Label8" type="Label" parent="Panel"]
+margin_left = 190.643
+margin_top = 115.119
+margin_right = 316.643
+margin_bottom = 155.119
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0313726, 0.717647, 0.101961, 1 )
+text = "use"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label9" type="Label" parent="Panel"]
+margin_left = 632.299
+margin_top = 6.64453
+margin_right = 705.299
+margin_bottom = 37.6445
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0588235, 0.698039, 0.188235, 1 )
+text = "You:"
+
+[node name="Label10" type="Label" parent="Panel"]
+margin_left = 741.595
+margin_top = 9.30136
+margin_right = 837.595
+margin_bottom = 36.3014
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0588235, 0.698039, 0.188235, 1 )
+text = "Enemy:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label11" type="Label" parent="Panel"]
+margin_left = 625.771
+margin_top = 93.0993
+margin_right = 1215.77
+margin_bottom = 231.1
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0588235, 0.698039, 0.188235, 1 )
+text = "Rescue joe's mom 
+to win."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_PlayButton_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/yt1s.com-Kevin-MacLeod-Pixelland-NO-COPYRIGHT-8bit-Music.ogg-f4bf9a3e4f7515eb7bcde8f9ddfa89a4.oggstr"
+
+[deps]
+
+source_file="res://assets/soundsandmusic/yt1s.com-Kevin-MacLeod-Pixelland-NO-COPYRIGHT-8bit-Music.ogg"
+dest_files=[ "res://.import/yt1s.com-Kevin-MacLeod-Pixelland-NO-COPYRIGHT-8bit-Music.ogg-f4bf9a3e4f7515eb7bcde8f9ddfa89a4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

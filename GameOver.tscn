@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/more fonts/KiriFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Game menu but.gd" type="Script" id=2]
+[ext_resource path="res://assets/soundsandmusic/yt1s.com-Kevin-MacLeod-Pixelland-NO-COPYRIGHT-8bit-Music.ogg" type="AudioStream" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+outline_size = 3
+outline_color = Color( 0.0117647, 0.47451, 0.321569, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1018.0
+margin_bottom = 616.0
+color = Color( 0.0509804, 0.282353, 0.305882, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 234.452
+margin_top = 35.5934
+margin_right = 731.452
+margin_bottom = 164.593
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.654902, 0, 0.0470588, 1 )
+text = "Game Over"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Game menu but" type="Button" parent="."]
+margin_left = 373.0
+margin_top = 254.0
+margin_right = 594.0
+margin_bottom = 347.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.0235294, 0.666667, 0.427451, 1 )
+custom_colors/font_color_hover = Color( 0, 0.219608, 0.501961, 1 )
+custom_colors/font_color_pressed = Color( 0.176471, 0.0235294, 0.266667, 1 )
+text = "Main Menu"
+flat = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[connection signal="pressed" from="Game menu but" to="Game menu but" method="_on_Game_menu_but_pressed"]

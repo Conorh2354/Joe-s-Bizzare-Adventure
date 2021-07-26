@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://dialogue 2.gd" type="Script" id=1]
+[ext_resource path="res://assets/dialogue/paper-dialog.png" type="Texture" id=2]
+[ext_resource path="res://assets/more fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 3 )
+
+[node name="Closing" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 4.0
+margin_right = 2.0
+margin_bottom = 4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dialogue 2" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="dialogue 2"]
+margin_left = 165.0
+margin_top = 412.0
+margin_right = 815.0
+margin_bottom = 572.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="dialogue 2"]
+margin_left = 205.0
+margin_top = 432.0
+margin_right = 776.0
+margin_bottom = 553.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "\"Hey joe. Thanks for finding me.\",
+	\"I got lost exploring this cave.\" ,
+	\"Lets go home\""
+text = "\"Hey joe. Thanks for finding me.\",
+	\"I got lost exploring this cave.\" ,
+	\"Lets go home\""
+__meta__ = {
+"_edit_use_anchors_": false
+}
